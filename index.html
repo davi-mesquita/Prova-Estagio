@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="logo-in8-dev.svg" />
+    <title>IN8-DEV-ESTÁGIO</title>
+    <link rel="stylesheet" href="src/css/main.css" />
+    <link rel="stylesheet" href="src/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="src/css/burguer.css" />
+  </head>
+  <body>
+    <div class="parent">
+      <div class="nav">
+        <div class="nav-bar">
+          <div class="nav-burguer">
+            <button class="btn-menu" type="button">
+              <i class="btn-menu__bars" aria-hidden="true"></i>
+          </button>
+        </div>
+          <div class="nav-logo">
+            <a href="index.html"
+              ><img src="/src/imagens/logo-in8-dev.svg" alt="logo-in8-dev"
+            /></a>
+          </div>
+          <div class="nav-menu">
+            <ul>
+              <li><a href="#Cadastro">Cadastro</a></li>
+              <li><a href="#Lista">Lista</a></li>
+              <li><a href="#Sobre">Sobre mim </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <section class="introducao">
+          <div class="introducao-position">
+            <div class="introducao-text">
+              <h1>ESTÁGIO</h1>
+              <p>Prova de seleção</p>
+            </div>
+          </div>
+        </section>
+        <section class="cadastro" id="Cadastro" >
+            <div class="cadastro-position">
+                <div class="cadastro-form" >
+                    <h1>Cadastro</h1>
+                   
+                        <form action="cadastro.php" method="post" >
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" />
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" />
+                        <label for="local">Nascimento</label>
+                        <input type="text" name="local" id="local" />
+                        <label for="telefone">Telefone</label>
+                        <input type="text" name="telefone" id="telefone" />
+                        <button type="submit" value="Cadastrar">cadastrar</button>
+                        </form>
+
+                </div>
+            </div>
+        </section>
+        <section class="listar" id="Lista">
+          <div class="listar-position">
+            <div class="listar-tabela">
+              <h1>Lista de Cadastro</h1>
+              <table>
+                <tr>
+                  <th class="naotem"></th>
+                  <th>Nome</th>
+                  <th>Email</th>
+                  <th>Nascimento</th>
+                  <th>Telefone</th>
+                </tr>
+                <tr>
+                  <th>1</th>
+                  <td>Smith</td>
+                  <td>43</td>
+                  <td>Jackson</td>
+                  <td>57</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Jackson</td>
+                  <td>57</td>
+                  <td>Jackson</td>
+                  <td>57</td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>Smith</td>
+                  <td>43</td>
+                  <td>Jackson</td>
+                  <td>57</td>
+                </tr>
+                <tr>
+                  <th>4</th>
+                  <td>Jackson</td>
+                  <td>57</td>
+                  <td>Jackson</td>
+                  <td>57</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="footer" id="Sobre">
+        <div class="footer-img">
+          <div class="footer-text">
+              <p>
+                Fulano de Tal
+              </p>
+              <p>
+                Fulano@gmail.com
+              </p>
+              <p>
+                (11) 99999-9999
+              </p>
+              <p>
+                Faculdade de Tecnologia de Belo Horizonte
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/js/burguer.js"></script>
+  </body>
+</html>
