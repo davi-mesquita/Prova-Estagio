@@ -16,14 +16,17 @@ function Cadastro(){
         telefone: telefone
 
     }
-
+    
     let Pessoas = [];
-
+    
     Pessoas.push(Pessoa);
 
+    console.log(Pessoas);
+    
     if(nome !== "" && email !== "" && nascimento !== "" && telefone !== ""){
-        lista.innerText = '';
+       
         for (let i = 0; i < Pessoas.length; i++) {
+
             let tr = lista.insertRow();
            
             let td_id = tr.insertCell();
@@ -32,12 +35,11 @@ function Cadastro(){
             let td_nascimento = tr.insertCell();
             let td_telefone = tr.insertCell();
 
-              
-            td_id.innerText =  this.Pessoas[i].id;
-            td_nome.innerText =  this.Pessoas[i].nome;
-            td_email.innerText =  this.Pessoas[i].email;
-            td_nascimento.innerText =  this.Pessoas[i].nascimento;
-            td_telefone.innerText =  this.Pessoas[i].telefone;
+            td_id.innerText = Pessoas[i].id;
+            td_nome.innerText = Pessoas[i].nome;
+            td_email.innerText = Pessoas[i].email;
+            td_nascimento.innerText = Pessoas[i].nascimento;
+            td_telefone.innerText = Pessoas[i].telefone;
         }
     }else{
         alert("Preencha todos os campos!");
