@@ -51,17 +51,26 @@ th, td {
     grid-row-gap: 0px;
     width: 100%;
 }
+.topo{
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    z-index: 1;
+    width: 5%;
+    height: 5%;
+}
+.topo button{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+}
 .nav { 
     grid-area: 1 / 1 / 2 / 2;
     display: flex;
     justify-content: center; 
     align-items: center;
-    /*Caso queira o NavBar Fixado no Topo
-    position: fixed;
-    left: 50%;
-    transform: translate(-35%, 0%);
-    height: 30%;
-    */
     background-color: transparent;
     height: 60%;
     width: 100%;
@@ -213,12 +222,9 @@ th, td {
     text-align: center;
 }
 .listar-tabela table{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    width: 60%;
     height: 100%;
-    margin: 3rem 0rem;
+    margin: 0 auto;
 }
 
 .listar-tabela table tr th{
@@ -259,6 +265,7 @@ th, td {
     color: #fff;
     text-align: center;
 }
+/*Tablet*/
 @media only screen and (max-width: 768px) {
     .nav-burguer{
         display: block;
@@ -279,8 +286,17 @@ th, td {
         color: #fff;
         text-transform: uppercase;
     }
+    .listar-tabela table{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
 }
+/*Mobile*/
 @media only screen and (max-width: 600px){
+    .topo{
+        display: none;
+    }
     .introducao{
         background-image: url("/src/imagens/index-image-mobile.jpg");
     }

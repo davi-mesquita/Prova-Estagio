@@ -62,3 +62,49 @@
 .menu-open .btn-menu .btn-menu__bars:after {
 	transform: rotate(-45deg);
 }
+.menu-closed{
+	display: none;
+
+}
+.menu-open{
+	position: absolute;
+    display: flex;
+    top: 4.1rem;
+    left: 3.5rem;
+    width: 20%;
+    height: 25%;
+    background-color: #29abe2;
+    justify-content: center;
+}
+
+.nav-menu-open ul{
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	padding: 1rem;
+
+
+}
+.nav-menu-open ul li {
+    list-style: none;
+    margin: 0.5rem; 
+}
+.nav-menu-open ul li a{
+    font: 1rem 'Roboto Regular', sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
+@media only screen and (max-width: 600px){
+	.menu-open{
+		position: absolute;
+		display: flex;
+		top: 4.1rem;
+		left: 0rem;
+		width: 50%;
+		height: 25%;
+		background-color: #29abe2;
+		justify-content: center;
+		transition: transform 1s ease;
+	}
+}

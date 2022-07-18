@@ -9,17 +9,25 @@
     <link rel="stylesheet" href="src/css/main.css" />
     <link rel="stylesheet" href="src/css/font-awesome.min.css" />
     <link rel="stylesheet" href="src/css/burguer.css" />
-    <!--TESTE-->
   </head>
   <body>
-    <div class="parent">
+    <div class="parent" id="parent">
       <div class="nav">
         <div class="nav-bar">
           <div class="nav-burguer">
             <button class="btn-menu" type="button">
-              <i class="btn-menu__bars" aria-hidden="true"></i>
-          </button>
-        </div>
+              <i id="teste" class="btn-menu__bars" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="menu-closed" id="menu">
+            <div class="nav-menu-open">
+              <ul>
+                <li><a href="#Cadastro">Cadastro</a></li>
+                <li><a href="#Lista">Lista</a></li>
+                <li><a href="#Sobre">Sobre mim </a></li>
+              </ul>
+            </div>
+          </div>
           <div class="nav-logo">
             <a href="index.html"
               ><img src="/src/imagens/logo-in8-dev.svg" alt="logo-in8-dev"
@@ -48,16 +56,16 @@
                 <div class="cadastro-form" >
                     <h1>Cadastro</h1>
                    
-                        <form action="cadastro.php" method="post" >
+                        <form id="Cadastro" method="post">
                         <label for="nome">Nome</label>
                         <input type="text" name="nome" id="nome" />
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" />
                         <label for="local">Nascimento</label>
-                        <input type="text" name="local" id="local" />
+                        <input type="text" name="local" id="nascimento" />
                         <label for="telefone">Telefone</label>
                         <input type="text" name="telefone" id="telefone" />
-                        <button type="submit" value="Cadastrar">cadastrar</button>
+                        <button onclick="Cadastro()" >cadastrar</button>
                         </form>
 
                 </div>
@@ -67,42 +75,25 @@
           <div class="listar-position">
             <div class="listar-tabela">
               <h1>Lista de Cadastro</h1>
-              <table>
+              <table >
+                <thead>
+                  <tr>
+                    <th class="naotem"></th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Nascimento</th>
+                    <th>Telefone</th>
+                  </tr>
+                </thead>
+               <tbody id="Lista-de-Cadastro">
                 <tr>
-                  <th class="naotem"></th>
-                  <th>Nome</th>
-                  <th>Email</th>
-                  <th>Nascimento</th>
-                  <th>Telefone</th>
-                </tr>
-                <tr>
-                  <th>1</th>
+                  <td>1</td>
                   <td>Smith</td>
                   <td>43</td>
                   <td>Jackson</td>
                   <td>57</td>
                 </tr>
-                <tr>
-                  <th>2</th>
-                  <td>Jackson</td>
-                  <td>57</td>
-                  <td>Jackson</td>
-                  <td>57</td>
-                </tr>
-                <tr>
-                  <th>3</th>
-                  <td>Smith</td>
-                  <td>43</td>
-                  <td>Jackson</td>
-                  <td>57</td>
-                </tr>
-                <tr>
-                  <th>4</th>
-                  <td>Jackson</td>
-                  <td>57</td>
-                  <td>Jackson</td>
-                  <td>57</td>
-                </tr>
+               </tbody>     
               </table>
             </div>
           </div>
@@ -126,7 +117,12 @@
           </div>
         </div>
       </div>
+      <div class="topo">
+        <button><img src="src/icones/topo-pag.svg" alt=""></button>
+      </div>
     </div>
-    <script src="src/js/burguer.js"></script>
+    <script src="src/js/Main.js"></script>
+    <script src="src/js/Cadastro.js"></script>
+    <script src="src/js/Burguer.js"></script>
   </body>
 </html>
